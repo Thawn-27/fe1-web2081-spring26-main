@@ -3,18 +3,17 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css',
+  templateUrl: './app.html'
 })
 export class App {
-  title = 'my-app';
-  fullName = 'thanhpx27';
+
+  fullName: string = 'thanhpx27';
   age: number = 10;
 
   sayHello() {
-    console.log('hello ');
-    alert("Bạn đã click button");
+    alert('Hello Angular!');
   }
 
 }

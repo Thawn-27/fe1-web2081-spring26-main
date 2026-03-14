@@ -1,32 +1,65 @@
 <nav class="bg-blue-600 text-white shadow">
   <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-    <a href="#" class="text-xl font-semibold">
+    
+    <!-- Logo -->
+    <a routerLink="/" class="text-xl font-semibold">
       <strong>WEB2081 App</strong>
     </a>
 
+    <!-- Menu -->
     <div class="hidden md:flex items-center space-x-8">
-      <a href="#" class="hover:text-gray-200">Trang chủ</a>
-      <a href="#" class="hover:text-gray-200">Danh sách</a>
-      <a href="#" class="hover:text-gray-200">Thêm mới</a>
+      <a routerLink="/" routerLinkActive="font-bold" class="hover:text-gray-200">
+        Trang chủ
+      </a>
+
+      <a routerLink="/about" routerLinkActive="font-bold" class="hover:text-gray-200">
+        Danh sách
+      </a>
+
+      <a routerLink="/contact" routerLinkActive="font-bold" class="hover:text-gray-200">
+        Thêm mới
+      </a>
     </div>
 
+    <!-- Login -->
     <div class="hidden md:flex items-center space-x-6">
-      <a href="#" class="hover:text-gray-200">Đăng nhập</a>
-      <a href="#" class="hover:text-gray-200">Đăng ký</a>
+      <a routerLink="/login" class="hover:text-gray-200">Đăng nhập</a>
+      <a routerLink="/register" class="hover:text-gray-200">Đăng ký</a>
     </div>
+
   </div>
 </nav>
 
 <div class="max-w-6xl mx-auto mt-10 px-4 text-center">
-  <h1 class="text-4xl font-bold mb-4">Xin chào Angular
-Tôi đang học Angular Framework</h1>
-  <h2 class="text-3xl font-bold">Ten toi la: {{ fullName }}</h2>
-  <p>Tuoi: {{ age }}</p>
+
+  <h1 class="text-4xl font-bold mb-4">
+    Xin chào Angular<br>
+    Tôi đang học Angular Framework
+  </h1>
+
+  <h2 class="text-3xl font-bold">
+    Tên tôi là: {{ fullName }}
+  </h2>
+
+  <p>Tuổi: {{ age }}</p>
+
   <button
     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     (click)="sayHello()"
   >
     Say hello
   </button>
+
+  <hr class="my-6">
+
+  <h1>Angular Routing Demo</h1>
+
+  <nav>
+    <a routerLink="/">Home</a> |
+    <a routerLink="/about">About</a> |
+    <a routerLink="/contact">Contact</a>
+  </nav>
+
   <router-outlet></router-outlet>
+
 </div>
