@@ -1,0 +1,13 @@
+table{
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td{
+  padding: 10px;
+  text-align: center;
+}
+
+img{
+  border-radius: 6px;
+}
