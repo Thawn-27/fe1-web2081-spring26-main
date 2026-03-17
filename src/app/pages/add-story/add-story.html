@@ -1,0 +1,30 @@
+<h2>Thêm truyện tranh</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="submitForm()">
+
+  <div>
+    <label for="title">Tên truyện</label>
+    <input id="title" type="text" formControlName="title" placeholder="Nhập tên truyện" />
+
+    @if (title?.invalid && title?.touched) {
+      <p style="color:red">Tên truyện phải >= 3 ký tự</p>
+    }
+  </div>
+
+  <div>
+    <label for="author">Tác giả</label>
+    <input id="author" type="text" formControlName="author" placeholder="Nhập tên tác giả" />
+  </div>
+
+  <div>
+    <label for="views">Lượt xem</label>
+    <input id="views" type="number" formControlName="views" placeholder="Nhập lượt xem" />
+  </div>
+
+  <button type="submit" [disabled]="addForm.invalid">
+    Thêm truyện
+  </button>
+
+</form>
+
+<pre>{{ addForm.value | json }}</pre>
